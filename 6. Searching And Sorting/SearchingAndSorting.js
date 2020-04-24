@@ -398,3 +398,25 @@ mythical.sort(sortComparator);
 7 // ["magic", "dragon", "slayer", "ned stark", "wizard of of"]
 
 
+
+
+//  ! Insertion sort is the best sorting method for sorrting a half sorted array
+
+// let a = [1, 13, 145, 177, 5, 8, 111, 198];
+
+
+
+// function sorting(array) {
+//     let len = array.length;
+//     let key = null, i, j;
+//     for (i = array.length / 2; i < len - 1; i++) {
+//         key = array[i];
+//         for (j = i - 1; j > -1 && array[j] > key; j--) {
+//             array[j + 1] = array[j];
+//         }
+//         array[j + 1] = key
+//     }
+//     return array
+// }
+
+// console.log('solution', sorting(a));
