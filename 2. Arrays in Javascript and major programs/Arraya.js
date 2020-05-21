@@ -1016,7 +1016,52 @@ const linearSum = n => {
   /**
    *
    */
-  
+  function readOnesInArray(arr, rowsLen, colLen) {
+
+    let row = 0;
+    let max = 0;
+    let count = 0;
+    let traversePointer = 0;
+
+    for (let i = 0; i < rowsLen; i++) {
+
+        // if (arr[i][0] === 0) {
+        //     continue;
+        // }
+        for (let j = traversePointer; j < colLen; j++) {
+            if (arr[i][j] === 1) {
+                count = traversePointer + 1;
+            }
+            else {
+                break;
+            }
+        }
+        if (count > max) {
+            max = count;
+            row = i + 1;
+            traversePointer = j;
+        }
+        if(max === colLen){
+            break;
+        }
+    }
+
+    return row
+}
+
+
+// Input :
+// n = 7, m = 5
+
+// 1 0 0 0 0
+// 1 1 1 0 0
+// 1 1 1 1 1
+// 1 0 0 0 0
+// 1 1 1 1 0
+// 1 0 0 0 0
+// 1 1 0 0 0 
+
+// Output : row = 3
   
   
   
